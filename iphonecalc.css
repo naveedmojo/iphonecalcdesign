@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.iphone-container {
+  max-width: 300px; /* iPhone width */
+  height: 620px; /* iPhone height */
+  border-radius: 45px; /* iPhone border radius */
+  border: 3px solid #000; /* iPhone border color */
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background-color: #000;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.calculator-screen {
+  height: 225px; /* Calculator screen height */
+  background-color: #000;
+  color: #ffffff;
+  padding: 10px;
+}
+.calculator-input-screen {
+  background-color: black;
+  border: none;
+  height: 25%;
+  color: white;
+  outline: none;
+  font-size: 38px;
+  padding: 9px;
+  text-align: right;
+  font-family: Helvetica, sans-serif;
+}
+
+.calculator-input-screen::placeholder {
+  color: rgb(249, 244, 244);
+  opacity: 1;
+}
+
+.calculator-input-screen:focus {
+  outline: none;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 18px;
+  background-color: #000;
+}
+
+.button {
+  width: 57px; /* Button width */
+  height: 57px; /* Button height */
+  font-size: 25px;
+  background-color: #313131; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%; /* Button border radius */
+  font-family: Helvetica, sans-serif;
+}
+.button:hover {
+  background-color: #c6c2c2;
+}
+
+.button-orange {
+  background-color: #f69906; /* Orange buttons background color */
+  color: #fff; /* Orange buttons text color */
+  font-size: 26px;
+  text-align: center;
+}
+.button-orange:hover {
+  background-color: #ffb339;
+}
+
+.button-gray {
+  background-color: #9f9f9f; /* Gray buttons background color */
+  color: #000; /* Gray buttons text color */
+}
+
+/* Start modification: Input text alignment */
+.calculator-screen {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#screen {
+  text-align: right;
+}
+.button-zero {
+  grid-column: span 2; /* Make the zero button span 2 columns */
+  width: 100%;
+  border-radius: 30px;
+  text-align: left;
+  padding-left: 23px;
+  font-size: 25px;
+}
+@media screen and (max-width: 325px) {
+  .iphone-container {
+    min-width: 100%;
+    margin: 0;
+    height: 100vh;
+    border-radius: 25px;
+  }
+  .button-container {
+    padding: 13px;
+    margin-top: 0.6em;
+    grid-gap: 7px;
+  }
+  .button {
+    width: 60px;
+    height: 60px;
+  }
+  .button-zero {
+    grid-column: span 2; /* Make the zero button span 2 columns */
+    width: 100%;
+    border-radius: 30px;
+    text-align: left;
+    padding-left: 23px;
+    font-size: 25px;
+  }
+}
